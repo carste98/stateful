@@ -28,3 +28,6 @@ https://sdk.operatorframework.io/docs/building-operators/ansible/tutorial/
 1. `kubectl delete operatorgroup <og>`
 2. `kubectl delete subscription <sub>`
 3. `kubectl delete csv <csv>`
+
+### PostgreSQL Operator
+https://github.com/zalando/postgres-operator/blob/master/docs/quickstart.md
