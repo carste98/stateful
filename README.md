@@ -16,4 +16,18 @@ Main tutorial
 
 https://sdk.operatorframework.io/docs/building-operators/ansible/tutorial/
 
+### OLM - community operator
 
+#### Build operator
+
+1. create and apply operator group yaml
+2. create and apply subscription yaml
+3. should now be able to `kubectl get operatorgroup <og>` or other resource to verify existence of operator.
+
+#### Delete operator
+1. `kubectl delete operatorgroup <og>`
+2. `kubectl delete subscription <sub>`
+3. `kubectl delete csv <csv>`
+
+### PostgreSQL Operator
+https://github.com/zalando/postgres-operator/blob/master/docs/quickstart.md
