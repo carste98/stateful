@@ -2,4 +2,4 @@
 
 terraform apply
 
-gcloud container clusters get-credentials --region=europe-west1-b dark-blade-342011-gke
+gcloud container clusters get-credentials --region=europe-north1-a dark-blade-342011-gke
