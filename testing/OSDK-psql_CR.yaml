@@ -1,0 +1,7 @@
+apiVersion: sql.hub.docker.com/v1alpha1
+kind: Psql
+metadata:
+  name: psql-sample
+spec:
+  size: 4
+  # TODO(user): Add fields here
