@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: psql-deployment
+spec: 
+  selector:
+    matchLabels:
+      app: psql
+  replicas: {{ .Params.replicas }}
+  template:
+    metadata:
+      labels:
+        app: psql
+    spec:
+      containers:
+        - name: psql
+          image: postgres:{{ .AppVersion }}
+          ports:
+            - containerPort: 5432
+          env:
+          - name: POSTGRES_PASSWORD
+            value: {{ .Params.POSTGRES_PASSWORD }}
+          - name: POSTGRES_USER 
+            value: {{ .Params.POSTGRES_USER }}
+          - name: POSTGRES_DB
+            value: {{ .Params.POSTGRES_DB }}
+    volumeClaimTemplates:
+    - metadata:
+        name: www
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: {{ .Params.VOLUME_SIZE }}

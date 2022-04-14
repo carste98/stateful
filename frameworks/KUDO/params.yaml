@@ -1,0 +1,18 @@
+apiVersion: kudo.dev/v1beta1
+parameters:
+  - name: replicas
+    trigger: deploy
+    description: Number of replicas that should be run as part of the deployment
+    default: 4
+  - name: POSTGRES_PASSWORD
+    description: Password for postgres instance
+    default: "admin"
+  - name: POSTGRES_USER
+    description: User for postgres instance
+    default: "user"
+  - name: POSTGRES_DB
+    description: Database
+    default: "db"
+  - name: VOLUME_SIZE
+    description: size of volumeClaimTemplate
+    default: 1Gi
