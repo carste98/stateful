@@ -4,8 +4,8 @@ import os
 from dotenv import load_dotenv
 
 # Check correct amount of args
-if len (sys.argv) != 2 :
-    print("Usage: checkVersion.py [IP]")
+if len (sys.argv) != 3 :
+    print("Usage: checkVersion.py [IP] [PORT]")
     sys.exit (1)
 
 # load env
@@ -16,7 +16,7 @@ conn = psycopg2.connect(
    user=os.getenv("DBUSER"), 
    password=os.getenv("DBPASSWORD"), 
    host=sys.argv[1], 
-   port= '5432'
+   port=sys.argv[2]
 )
 
 cursor = conn.cursor()
