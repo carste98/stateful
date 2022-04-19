@@ -1,0 +1,6 @@
+apiVersion: test.com/v1
+kind: psql
+metadata:
+  name: psql-sample
+spec:
+  size: 4
