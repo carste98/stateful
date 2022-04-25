@@ -1,5 +1,5 @@
 #!/bin/bash
 
-terraform apply
+terraform apply -auto-approve
 
-gcloud container clusters get-credentials --region=europe-north1-a dark-blade-342011-gke
+gcloud container clusters get-credentials --region=$(terraform output -raw zone) $(terraform output -raw kubernetes_cluster_name)

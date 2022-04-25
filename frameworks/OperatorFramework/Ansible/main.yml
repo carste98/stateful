@@ -1,0 +1,40 @@
+---
+- name: startpsql
+  kubernetes.core.k8s:
+    definition:
+      kind: StatefulSet
+      apiVersion: apps/v1
+      metadata:
+        name: '{{ ansible_operator_meta.name }}-psql'
+        namespace: '{{ ansible_operator_meta.namespace }}'
+      spec:
+        replicas: "{{ size }}"
+        selector:
+          matchLabels:
+            app: psql
+        template:
+          metadata:
+            labels:
+              app: psql
+          spec:
+            containers:
+            - name: psql
+              env:
+              - name: POSTGRES_PASSWORD
+                value: "admin"
+              - name: POSTGRES_USER
+                value: "user"
+              - name: POSTGRES_DB
+                value: "db"
+              image: "postgres:latest"
+              ports:
+                - containerPort: 5432
+          volumeClaimTemplates:
+          - metadata:
+              name: www
+            spec:
+              accessModes: [ "ReadWriteOnce" ]
+              storageClassName: "psql-storage"
+              resources:
+                requests:
+                  storage: 1Gi

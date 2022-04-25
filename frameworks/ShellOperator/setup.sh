@@ -10,10 +10,13 @@ fi
 docker build -t $DOCKER_USER/shelloperator .
 docker push $DOCKER_USER/shelloperator
 
+# Deploy CRD
+kubectl apply -f psql-crd.yaml
+
 #create RBAC for shell-operator
 kubectl create namespace example-monitor-pods
 kubectl create serviceaccount monitor-pods-acc --namespace example-monitor-pods
-kubectl create clusterrole monitor-pods --verb=get,watch,list,create --resource=pods,StatefulSet
+kubectl create clusterrole monitor-pods --verb=get,watch,list,create --resource=pods,StatefulSet,psql
 kubectl create clusterrolebinding monitor-pods --clusterrole=monitor-pods --serviceaccount=example-monitor-pods:monitor-pods-acc
 
 # Deploy shell-operator as pod inside cluster
