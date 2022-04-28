@@ -23,7 +23,7 @@ The testing environment will run on [GKE - Google Kubernetes Engine](https://clo
 
 For building Infrastructure, [Terraform](https://www.terraform.io/) is used. Terraform will create the necessary infrastructure for running the frameworks on **GKE**. This means that the infrastructure will be consistent and reproduceable.
 
-For more information on how to use Terraform to build infrastructure see either [My Terraform Repository]() or [Official Terraform Tutorial for Google](https://learn.hashicorp.com/tutorials/terraform/google-cloud-platform-build
+For more information on how to use Terraform to build infrastructure see either [My Terraform Repository](https://github.com/carste98/stateful/tree/main/terraform) or [Official Terraform Tutorial for Google](https://learn.hashicorp.com/tutorials/terraform/google-cloud-platform-build
 ).
 
 
