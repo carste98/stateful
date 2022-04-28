@@ -1,4 +1,4 @@
-#This is the code for setting up - [Shell Operator](https://github.com/flant/shell-operator)
+# This is the code for setting up - [Shell Operator](https://github.com/flant/shell-operator)
 
 ## To run this mwe you need:
 1. A docker account
