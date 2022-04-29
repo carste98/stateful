@@ -13,8 +13,23 @@
 
 ## Verify that operating is running
 1. Verify existing operator namespace by running `kubectl get ns`
-2. Verify that the pod is running `kubectl get all -n example-monitor-pods`.
-3. Check that there is no errors with the operator `kubectl logs pod/shell-operator -n example-monitor-pods`
+```console
+NAME                   STATUS   AGE
+example-monitor-pods   Active   3s
+```
+
+3. Verify that the pod is running `kubectl get all -n example-monitor-pods`.
+```console
+NAME                 READY   STATUS    RESTARTS   AGE
+pod/shell-operator   1/1     Running   0          88s
+```
+5. Check that there is no errors with the operator `kubectl logs pod/shell-operator -n example-monitor-pods | grep "error"` which should only return messages initializing error counters. 
+
+```console
+{"level":"info","msg":"Create metric counter shell_operator_hook_enable_kubernetes_bindings_errors_total","operator.component":"metricStorage","time":"2022-04-29T09:19:47Z"}
+{"level":"info","msg":"Create metric counter shell_operator_hook_run_errors_total","operator.component":"metricStorage","time":"2022-04-29T09:19:47Z"}
+{"level":"info","msg":"Create metric counter shell_operator_hook_run_allowed_errors_total","operator.component":"metricStorage","time":"2022-04-29T09:19:47Z"}
+```
 
 ## Test the functionality
 1. Run `kubectl get pods` which should not contain any pods.
