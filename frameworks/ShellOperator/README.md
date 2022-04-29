@@ -43,3 +43,9 @@ www-psql-pod-1           Bound    pvc-c3c5b1de-6a40-4917-9e6a-933df32cb2d2   1Gi
 www-psql-pod-2           Bound    pvc-54b0d668-caad-4cae-ab53-06d8b1d3d91d   1Gi        RWO            standard       4m51s
 www-psql-pod-3           Bound    pvc-f661e263-8662-470e-a41a-1059319dab4a   1Gi        RWO            standard       4m46s
 ```
+
+## Comments about framework
+
+1. Alot of things are kind of hardcoded in this solution. It still uses variables for sizing as specified by the operator template and it watches an externally added **CR**.
+2. This framework could be useful if you are proficient in writing scripts.
+3. This framework probably shines in scenarios when you want to have scheduled events which acts as cronjobs, inside the cluster.
