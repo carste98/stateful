@@ -18,11 +18,10 @@
 
 ## Test the functionality
 1. Run `k get pods` which should not contain any pods.
-2. 
 ```console
 No resources found in default namespace.
 ```
-3. Run `k apply -f psql-cr.yaml` to insert a CR in to the cluster.
+2. Run `k apply -f psql-cr.yaml` to insert a CR in to the cluster.
 ```yaml
 apiVersion: test.com/v1
 kind: psql
@@ -31,7 +30,7 @@ metadata:
 spec:
   size: 4
 ```
-4. Run `kubectl get pods` to verify the existence of a set of pods where the amount is equal to the size field in the **CR** defined in the previous step.
+3. Run `kubectl get pods` to verify the existence of a set of pods where the amount is equal to the size field in the **CR** defined in the previous step.
 
 ```console
 NAME         READY   STATUS    RESTARTS   AGE
@@ -40,7 +39,7 @@ psql-pod-1   1/1     Running   0          16s
 psql-pod-2   1/1     Running   0          11s
 psql-pod-3   1/1     Running   0          6s
 ```
-5. Run `kubectl get pvc` to verify the existence of persistent volume claims for each of the pods.
+4. Run `kubectl get pvc` to verify the existence of persistent volume claims for each of the pods.
 ```console
 www-psql-pod-0           Bound    pvc-c3851023-c41b-4119-a33a-9b70f824f40a   1Gi        RWO            standard       5m1s
 www-psql-pod-1           Bound    pvc-c3c5b1de-6a40-4917-9e6a-933df32cb2d2   1Gi        RWO            standard       4m56s
