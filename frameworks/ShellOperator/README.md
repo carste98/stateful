@@ -18,7 +18,11 @@
 
 ## Test the functionality
 1. Run `k get pods` which should not contain any pods.
-2. Run `k apply -f psql-cr.yaml` to insert a CR in to the cluster.
+2. 
+```console
+No resources found in default namespace.
+```
+3. Run `k apply -f psql-cr.yaml` to insert a CR in to the cluster.
 ```yaml
 apiVersion: test.com/v1
 kind: psql
