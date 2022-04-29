@@ -46,6 +46,6 @@ www-psql-pod-3           Bound    pvc-f661e263-8662-470e-a41a-1059319dab4a   1Gi
 
 ## Comments about framework
 
-1. Alot of things are kind of hardcoded in this solution. It still uses variables for sizing as specified by the operator template and it watches an externally added **CR**.
+1. Some things are kind of hardcoded in this solution which may be due to either (1) my lack of understanding how to properly leverage the framework to do this kind of task or (2) the framework is not suitable for this kind of use case. It still uses variables for sizing as specified by the operator template and it watches an externally added **CR**.
 2. This framework could be useful if you are proficient in writing scripts.
 3. This framework probably shines in scenarios when you want to have scheduled events which acts as cronjobs, inside the cluster.
