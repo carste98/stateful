@@ -10,19 +10,20 @@ kubernetes:
 EOF
 else
   type=$(jq -r '.[0].type' $BINDING_CONTEXT_PATH)
+  size=$(jq -r '.[0].object.spec.size' $BINDING_CONTEXT_PATH)
   if [[ $type == "Event" ]] ; then
-    cat << EOF | kubectl apply -f -
+    (cat << EOF | kubectl apply -f -
     apiVersion: apps/v1
     kind: StatefulSet
     metadata:
-      name: psql-deployment
+      name: psql-pod
       namespace: default
     spec:
       serviceName: "psql"
       selector:
         matchLabels:
           app: psql
-      replicas: 4
+      replicas: $size
       template:
         metadata:
           labels:
@@ -49,5 +50,6 @@ else
             requests:
               storage: 1Gi
 EOF
+) <<< "$size"
 fi
 fi
