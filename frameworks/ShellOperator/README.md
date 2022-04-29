@@ -12,16 +12,16 @@
 3. run `./setup.sh` - must be logged in to docker in bash and docker daemon must be running.
 
 ## Verify that operating is running
-1. Verify existing operator namespace by running `k get ns`
-2. Verify that the pod is running `k get all -n example-monitor-pods`.
-3. Check that there is no errors with the operator `k logs pod/shell-operator -n example-monitor-pods`
+1. Verify existing operator namespace by running `kubectl get ns`
+2. Verify that the pod is running `kubectl get all -n example-monitor-pods`.
+3. Check that there is no errors with the operator `kubectl logs pod/shell-operator -n example-monitor-pods`
 
 ## Test the functionality
-1. Run `k get pods` which should not contain any pods.
+1. Run `kubectl get pods` which should not contain any pods.
 ```console
 No resources found in default namespace.
 ```
-2. Run `k apply -f psql-cr.yaml` to insert a CR in to the cluster.
+2. Run `kubectl apply -f psql-cr.yaml` to insert a CR in to the cluster.
 ```yaml
 apiVersion: test.com/v1
 kind: psql
