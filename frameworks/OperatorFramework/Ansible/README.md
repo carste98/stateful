@@ -77,4 +77,3 @@ www-psql-sample-psql-3   Bound    pvc-7c441de7-9e9b-4151-8d65-4b0d6c019534   1Gi
 2. It feels high level and robust but as mentioned it is very comprenhensive and might take some time to truly understand.
 3. It is possible to run operators locally with this framework which can be used for developing a bit faster but not much more than that.
 4. Out of all framework, this seems to have the most tutorials and community support.
-5.  
