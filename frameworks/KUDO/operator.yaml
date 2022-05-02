@@ -12,7 +12,7 @@ tasks:
     kind: Apply
     spec:
       resources:
-        - deployment.yaml
+        - psql-ss.yaml
 plans:
   deploy:
     strategy: serial

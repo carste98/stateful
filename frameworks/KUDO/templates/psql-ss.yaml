@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: psql-deployment
+  name: psql
 spec: 
   selector:
     matchLabels:
@@ -29,11 +29,11 @@ spec:
           volumeMounts:
             - name: www
               mountPath: /mnt
-    volumeClaimTemplates:
-    - metadata:
-        name: www
-      spec:
-        accessModes: [ "ReadWriteOnce" ]
-        resources:
-          requests:
-            storage: {{ .Params.VOLUME_SIZE }}
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: {{ .Params.VOLUME_SIZE }}
