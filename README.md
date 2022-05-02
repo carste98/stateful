@@ -57,5 +57,6 @@ This problem likely occured due to me using Docker hub. There is a mismatch betw
 Tutorial
 https://olm.operatorframework.io/docs/getting-started/
 
-### PostgreSQL Operator
-https://github.com/zalando/postgres-operator/blob/master/docs/quickstart.md
+### [Operator Hub](https://operatorhub.io/)
+
+There are a lot of operators already created and maintained. Try to choose one from operator hub and install it with OLM with your own configuration.
