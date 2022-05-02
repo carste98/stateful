@@ -34,12 +34,11 @@
               image: "postgres:latest"
               ports:
                 - containerPort: 5432
-          volumeClaimTemplates:
-          - metadata:
-              name: www
-            spec:
-              accessModes: [ "ReadWriteOnce" ]
-              storageClassName: "psql-storage"
-              resources:
-                requests:
-                  storage: 1Gi
+        volumeClaimTemplates:
+        - metadata:
+            name: www
+          spec:
+            accessModes: [ "ReadWriteOnce" ]
+            resources:
+              requests:
+                storage: 1Gi
