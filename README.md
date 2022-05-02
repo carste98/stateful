@@ -4,6 +4,14 @@ This is the code produced during the testing for the project on life-cycle manag
 
 # Life-cycle management of stateful applications on top of Kubernetes.
 
+
+## Operator Template
+1. Recognize when a Custom Resource with a specific name is inserted into the cluster.
+2. Create a StatefulSet of X pods with X Persistent Volumes where X is the replicas specified by the Custom Resource.
+3. The base image is the official postgres image from docker hub.
+
+![This is an image](https://github.com/carste98/stateful/blob/main/OperatorTemplate.drawio.pdf?raw=true)
+
 ## Frameworks
 For this project 4 different frameworks:
 
