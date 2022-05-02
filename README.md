@@ -19,15 +19,12 @@ In this case the chosen stateful application is the official postgres image from
 ## Frameworks
 For this project 4 different frameworks:
 
-### 1. Operator Framework
-### 2. KUDO
-### 3. Kopf
-### 4. Shell Operator
+### 1. [Operator Framework](https://operatorframework.io/)
+### 2. [KUDO](https://github.com/kudobuilder/kudo)
+### 3. [Kopf](https://github.com/nolar/kopf)
+### 4. [Shell Operator](https://github.com/flant/shell-operator)
 
-will be implemented using the same operator template:
-
-
-
+will be implemented using the same operator template.
 
 ## Infrastructure
 
