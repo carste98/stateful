@@ -9,16 +9,18 @@ I have tested running Kopf both ways and the method is only slightly different. 
 
 ## Requirements:
 1. check [Kopf Installation Docs]() for supported Python version - **(2022-04-29) : Python >= 3.7 (CPython and PyPy are officially tested and supported)**
-2. setup docker so it can be run in bash or linux
 
 ## Locally:
 ### How to run:
 1. Download files.
 2. Add a '.env' file in the root folder with `DOCKER_USER=<USERNAME>`.
-3. Run `./setup.sh` - must be logged in to docker in bash and docker daemon must be running.
+3. Run `./setuplocal.sh`
 
 ### Verify that operating is running
 1. When running locally the operator is running in the terminal windows where the setup script was executed and stays functional until the process is terminated. Incoming events that affect the operator will thus appear in this window as they happen.
+```console
+
+```
 
 ### Test the functionality
 1. Run `kubectl get pods` which should not contain any pods.
