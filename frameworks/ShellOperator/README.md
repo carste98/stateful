@@ -2,14 +2,14 @@
 
 ## Requirements:
 1. A docker account
-2. setup docker so it can be run in bash or linux
+2. Setup docker so it can be run in bash or linux
 
 
 
 ## How to run:
-1. download files.
-2. add a '.env' file in the root folder with `DOCKER_USER=<USERNAME>`.
-3. run `./setup.sh` - must be logged in to docker in bash and docker daemon must be running.
+1. Download files.
+2. Add a '.env' file in the root folder with `DOCKER_USER=<USERNAME>`.
+3. Run `./setup.sh` - must be logged in to docker in bash and docker daemon must be running.
 
 ## Verify that operating is running
 1. Verify existing operator namespace by running `kubectl get ns`
