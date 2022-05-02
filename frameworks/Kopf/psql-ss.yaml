@@ -1,12 +1,14 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: psql-deployment
-spec: 
+  name: psql-pod
+  namespace: default
+spec:
+  serviceName: "psql"
   selector:
     matchLabels:
       app: psql
-  replicas: {{ .Params.replicas }}
+  replicas: {size}
   template:
     metadata:
       labels:
@@ -14,26 +16,26 @@ spec:
     spec:
       containers:
         - name: psql
-          image: postgres:{{ .AppVersion }}
+          image: "{img}"
           ports:
             - containerPort: 5432
           env:
           - name: POSTGRES_PASSWORD
-            value: {{ .Params.POSTGRES_PASSWORD }}
+            value: admin
           - name: POSTGRES_USER 
-            value: {{ .Params.POSTGRES_USER }}
+            value: user
           - name: POSTGRES_DB
-            value: {{ .Params.POSTGRES_DB }}
+            value: db
           - name: PGDATA
             value: /mnt/pgdata 
           volumeMounts:
             - name: www
               mountPath: /mnt
-    volumeClaimTemplates:
-    - metadata:
-        name: www
-      spec:
-        accessModes: [ "ReadWriteOnce" ]
-        resources:
-          requests:
-            storage: {{ .Params.VOLUME_SIZE }}
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi

@@ -41,6 +41,11 @@ else
                 value: user
               - name: POSTGRES_DB
                 value: db
+              - name: PGDATA
+                value: /mnt/pgdata 
+              volumeMounts:
+                - name: www
+                  mountPath: /mnt
       volumeClaimTemplates:
       - metadata:
           name: www

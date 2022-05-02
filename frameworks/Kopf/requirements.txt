@@ -1,3 +1,4 @@
+kubernetes==21.7.0
 kopf
 pykube-ng[gcp]
 pyyaml

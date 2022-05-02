@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kopf-operator
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      application: kopf-operator
+  template:
+    metadata:
+      labels:
+        application: kopf-operator
+    spec:
+      serviceAccountName: kopf-account
+      containers:
+      - name: kopf-one
+        image: docker.io/$DOCKER_USER/kopf-operator
