@@ -49,6 +49,6 @@ www-psql-3              Bound    pvc-4f76ff09-0e85-4ccb-bc20-11382a517c8b   1Gi 
 ## Comments about framework
 
 1. This is the only framework that I couldn't really create the kind of operator I wanted (where an event is triggered when a CR is inserted into the cluster). Instead I settled for simply deploying a statefulset + pvcs.
-2. This Framework is not really made for this type of test, instead it should be used to structure advanced deployment schemas where different **pipe-tasks** can be leveraged [pipe tasks](https://kudo.dev/docs/developing-operators/tasks.html#pipe-task).
+2. This Framework is not really made for this type of test, instead it should be used to structure advanced deployment schemas where different **pipe-tasks** can be leveraged ([pipe tasks](https://kudo.dev/docs/developing-operators/tasks.html#pipe-task)).
 3. It seems the documentation is semi-outdated. It is almost a year since the last push to the GitHub (as of 2022-05-02) which is probably a dealbreaker.
 4. I think that using Operator Framework with Ansible is just objectively better since Ansible in itself is very close to the declarative approach used in KUDO. If you combine that with the support and available tutorials it is a no-brainer.
