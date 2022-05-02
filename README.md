@@ -6,11 +6,15 @@ This is the code produced during the testing for the project on life-cycle manag
 
 
 ## Operator Template
-1. Recognize when a Custom Resource with a specific name is inserted into the cluster.
-2. Create a StatefulSet of X pods with X Persistent Volumes where X is the replicas specified by the Custom Resource.
-3. The base image is the official postgres image from docker hub.
+1. Monitor and wait for a specific custom resource to be inserted into the cluster.
+2. Create a StatefulSet of X pods with X Persistent Volumes where X is the replicas specified by the Custom Resource. The base image for the pods should be a stateful application. 
+
 
 ![This is an image](https://github.com/carste98/stateful/blob/main/OperatorTemplate.drawio.png?raw=true)
+
+
+In this case the chosen stateful application is the official postgres image from docker hub.
+
 
 ## Frameworks
 For this project 4 different frameworks:
