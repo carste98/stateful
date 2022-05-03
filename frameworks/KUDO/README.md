@@ -52,3 +52,31 @@ www-psql-3              Bound    pvc-4f76ff09-0e85-4ccb-bc20-11382a517c8b   1Gi 
 2. This Framework is not really made for this type of test, instead it should be used to structure advanced deployment schemas where different **pipe-tasks** can be leveraged ([pipe tasks](https://kudo.dev/docs/developing-operators/tasks.html#pipe-task)).
 3. It seems the documentation is semi-outdated. It is almost a year since the last push to the GitHub (as of 2022-05-02) which is probably a dealbreaker.
 4. I think that using Operator Framework with Ansible is just objectively better since Ansible in itself is very close to the declarative approach used in KUDO. If you combine that with the support and available tutorials it is a no-brainer.
+
+## Stats gathered using [repostat](https://github.com/vifactor/repostat) for KUDO
+<body>
+    <dl>
+    <dt>Project name</dt>
+        <dd>kudo</dd>
+    <dt>Branch analysed</dt>
+        <dd>main</dd>
+    <dt>Lifespan</dt>
+        <dd>from 2016-06-25 to 2021-07-02</dd>
+    <dt>Project age</dt>
+        <dd>1833 days, 405 active days
+            (22.09%)</dd>
+            <dt>Authors count</dt>
+        <dd>64</dd>
+    <dt>Commits count</dt>
+        <dd> 1030 total
+            (inc. 2.04% merge commits) </dd>
+        <dd> 0.56 per day </dd>
+        <dd> 2.54 per active day </dd>
+        <dd> 16.09 per author </dd>
+    <dt>Total files count</dt>
+        <dd>765</dd>
+    <dt>Total lines count</dt>
+        <dd>103818 (3454048 added, 3350230 removed)</dd>
+</dl>
+<p style="text-align:right;"> Report generated on 2022-05-03 20:08 </p>
+</body>
