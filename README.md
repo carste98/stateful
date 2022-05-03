@@ -39,7 +39,12 @@ For more information on how to use Terraform to build infrastructure see either 
 ## Metrics
 
 [Amount Documentation](https://github.com/carste98/stateful/tree/main/testing#measure-documentation-done-2022-05-03) - Measured 2022-05-03
-
+```console
+kopf-docs 2320730 bytes
+kudo-docs 455792 bytes
+operator-sdk-docs 3348450 bytes
+shell-operator.git 2742108 bytes
+```
 
 ## Side notes
 
