@@ -77,3 +77,33 @@ www-psql-sample-psql-3   Bound    pvc-7c441de7-9e9b-4151-8d65-4b0d6c019534   1Gi
 2. It feels high level and robust but as mentioned it is very comprenhensive and might take some time to truly understand.
 3. It is possible to run operators locally with this framework which can be used for developing a bit faster but not much more than that.
 4. Out of all framework, this seems to have the most tutorials and community support.
+
+## Stats gathered using [repostat](https://github.com/vifactor/repostat) for Operator SDK
+
+<body>
+    <dl>
+    <dt>Project name</dt>
+        <dd>operator-sdk</dd>
+    <dt>Branch analysed</dt>
+        <dd>master</dd>
+    <dt>Lifespan</dt>
+        <dd>from 2018-02-07 to 2022-04-29</dd>
+    <dt>Project age</dt>
+        <dd>1542 days, 885 active days
+            (57.39%)</dd>
+            <dt>Authors count</dt>
+        <dd>282</dd>
+    <dt>Commits count</dt>
+        <dd> 2965 total
+            (inc. 8.09% merge commits) </dd>
+        <dd> 1.92 per day </dd>
+        <dd> 3.35 per active day </dd>
+        <dd> 10.51 per author </dd>
+    <dt>Total files count</dt>
+        <dd>1074</dd>
+    <dt>Total lines count</dt>
+        <dd>100072 (1802523 added, 1702451 removed)</dd>
+</dl>
+<p style="text-align:right;"> Report generated on 2022-05-03 20:21 </p>
+</body>
+
