@@ -52,3 +52,11 @@ operator-sdk-docs 3348450 bytes
 ```console
 shell-operator.git 2742108 bytes
 ```
+### Results
+```console
+kopf-docs 2320730 bytes
+kudo-docs 455792 bytes
+operator-sdk-docs 3348450 bytes
+shell-operator.git 2742108 bytes
+```
+* shell operator is measures in total size of .md files instead of docs.
