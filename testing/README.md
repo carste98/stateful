@@ -10,7 +10,7 @@
 ## Measure Documentation (Done 2022-05-03)
 
 Measuring documentation is done by using the script `measureDocumentation.py` and `measureMD.py`. Every docs folder is downloaded using **subversion** or `svn`.
-
+If the need to replicate this measurement arises, the full download of all documentation can be automated using `downloadDocs.sh`.
 
 ### Scripts
 1. measureDocumentation.py -
