@@ -1,7 +1,3 @@
-# TLDR;
-This is the code produced during the testing for the project on life-cycle management of stateful applications on top of Kubernetes.
-
-
 # Life-cycle management of stateful applications on top of Kubernetes.
 
 
