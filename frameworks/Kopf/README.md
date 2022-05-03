@@ -150,6 +150,7 @@ www-psql-pod-3   Bound    pvc-31adf56c-46ee-4970-8fd6-09bebe5b8391   1Gi        
 ## Stats gathered using [repostat](https://github.com/vifactor/repostat) for kopf
 
 <body>
+    <dl>
     <dt>Project name</dt>
         <dd>kopf</dd>
     <dt>Branch analysed</dt>
