@@ -67,3 +67,32 @@ www-psql-pod-3           Bound    pvc-f661e263-8662-470e-a41a-1059319dab4a   1Gi
 1. Some things are kind of hardcoded in this solution which may be due to either (1) my lack of understanding how to properly leverage the framework to do this kind of task or (2) the framework is not suitable for this kind of use case. It still uses variables for sizing as specified by the operator template and it watches an externally added **CR**.
 2. This framework could be useful if you are proficient in writing scripts.
 3. This framework probably shines in scenarios when you want to have scheduled events which acts as cronjobs, inside the cluster.
+
+## Stats gathered using [repostat](https://github.com/vifactor/repostat) for Shell Operator
+<body>
+    <dl>
+    <dt>Project name</dt>
+        <dd>shell-operator</dd>
+    <dt>Branch analysed</dt>
+        <dd>main</dd>
+    <dt>Lifespan</dt>
+        <dd>from 2019-03-22 to 2022-04-27</dd>
+    <dt>Project age</dt>
+        <dd>1132 days, 194 active days
+            (17.14%)</dd>
+            <dt>Authors count</dt>
+        <dd>29</dd>
+    <dt>Commits count</dt>
+        <dd> 432 total
+            (inc. 32.41% merge commits) </dd>
+        <dd> 0.38 per day </dd>
+        <dd> 2.23 per active day </dd>
+        <dd> 14.90 per author </dd>
+    <dt>Total files count</dt>
+        <dd>310</dd>
+    <dt>Total lines count</dt>
+        <dd>28849 (59702 added, 30853 removed)</dd>
+</dl>
+<p style="text-align:right;"> Report generated on 2022-05-03 19:33 </p>
+</body>
+
