@@ -138,10 +138,39 @@ www-psql-pod-2   Bound    pvc-ef96e1e3-b4d2-48b2-a419-43e5772e34bf   1Gi        
 www-psql-pod-3   Bound    pvc-31adf56c-46ee-4970-8fd6-09bebe5b8391   1Gi        RWO            standard       19m
 ```
 
-### Comments about framework
+## Comments about framework
 
 1. I think this framework is good if you are used to writing using Python. It is intuitive to setup functions and access attributes on Kubernetes objects. 
 2. Being able to easily switch between running locally and in cluster is one of the best features of the framework. It is very fast to boot up a new version of the operator and simply watch the live logs in the open terminal when you run locally. This means that it is possible to get better error-logging by using native python functions such as "print". With error logging you can find the errors in the operators faster and then when the operator runs without problems locally you can move it to the cluster and test it there aswell. If you instead were to run it in the cluster every time it would take a lot longer due to having to build a base image.
 3. This framework strongly leverages the kubernetes library for python. The docs for that library are quite extensive and semi-hard to navigate.
 4. The peering and RBAC configuration is structured and highly configurable which is good in a security minded aspect but still it would be great if it were automatically generated to ease the development.
 
+
+
+## Stats gathered using [repostat](https://github.com/vifactor/repostat) for kopf
+
+<body>
+    <dt>Project name</dt>
+        <dd>kopf</dd>
+    <dt>Branch analysed</dt>
+        <dd>main</dd>
+    <dt>Lifespan</dt>
+        <dd>from 2019-03-06 to 2022-04-02</dd>
+    <dt>Project age</dt>
+        <dd>1122 days, 361 active days
+            (32.17%)</dd>
+            <dt>Authors count</dt>
+        <dd>48</dd>
+    <dt>Commits count</dt>
+        <dd> 1623 total
+            (inc. 25.32% merge commits) </dd>
+        <dd> 1.45 per day </dd>
+        <dd> 4.50 per active day </dd>
+        <dd> 33.81 per author </dd>
+    <dt>Total files count</dt>
+        <dd>391</dd>
+    <dt>Total lines count</dt>
+        <dd>51281 (104596 added, 53315 removed)</dd>
+</dl>
+<p style="text-align:right;"> Report generated on 2022-05-03 20:11 </p>
+</body>
