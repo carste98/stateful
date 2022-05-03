@@ -38,7 +38,8 @@ For more information on how to use Terraform to build infrastructure see either 
 
 ## Metrics
 
-[Amount Documentation](https://github.com/carste98/stateful/tree/main/testing#measure-documentation-done-2022-05-03)
+[Amount Documentation](https://github.com/carste98/stateful/tree/main/testing#measure-documentation-done-2022-05-03) - Measured 2022-05-03
+
 
 ## Side notes
 
