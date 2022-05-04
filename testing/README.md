@@ -9,7 +9,7 @@
 
 ## Measure Documentation (Done 2022-05-03)
 
-Measuring documentation is done by using the script `measureDocumentation.py` and `measureMD.py`. Every docs folder is downloaded using **subversion** or `svn`.
+Measuring documentation is done by using the script `measureSizeOfContentInFolder.py` and `measureMD.py`. Every docs folder is downloaded using **subversion** or `svn`.
 If the need to replicate this measurement arises, the full download of all documentation can be automated using `downloadDocs.sh`.
 
 ### Scripts
@@ -40,7 +40,7 @@ mv docs operator-sdk-docs
 ```
 5. Running the script for each of the folders
 ```
-python3 ./measureDocumentation.py ../../docs/kopf-docs/ ../../docs/kudo-docs/ ../../docs/operator-sdk-docs/
+python3 ./measureSizeOfContentInFolder.py ../../docs/kopf-docs/ ../../docs/kudo-docs/ ../../docs/operator-sdk-docs/
 ```
 where the relative path to the docs are passed as arguments
 ```console
