@@ -60,3 +60,20 @@ operator-sdk-docs 3348450 bytes
 shell-operator.git 2742108 bytes
 ```
 * shell operator is measures in total size of .md files instead of docs.
+
+## Measure amount of code written to create the operator
+
+When measuring amount of code there are several things you could factor in such as code for deploying such as dockerfiles and script, but this comparison will only take in to consideration the operator code. As the operator gets bigger, the code needed to setup the operator in your cluster will start to contribute less to the overall amount of code.
+
+By creating a new script called `amountWrittenCode.sh` which uses the script `measureSizeOfContentInFolder.py` we can measure sizes of folders and then print the output to a `results.txt`.
+
+By moving the code which is responsible for creating the operator in each of the frameworks to separate folders and then passing them as arguments to the script `./amountWrittenCode.sh kopf-code kudo-code operator-sdk-code/ shell-operator-code/` we get:
+
+```txt
+folder name: kopf-code - 1966 bytes
+folder name: kudo-code - 1902 bytes
+folder name: operator-sdk-code - 1172 bytes
+folder name: shell-operator-code - 1396 bytes
+```
+
+
