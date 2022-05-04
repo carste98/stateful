@@ -18,6 +18,6 @@ def get_size(start_path):
 
 for i in range(1, len(sys.argv)):
     name = sys.argv[i].split("/")
-    print(name[len(name)-2], get_size(sys.argv[i]), 'bytes')
+    print('folder name: ', name[len(name)-2], get_size(sys.argv[i]), 'bytes')
 
 
