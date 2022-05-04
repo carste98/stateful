@@ -13,7 +13,7 @@ Measuring documentation is done by using the script `measureSizeOfContentInFolde
 If the need to replicate this measurement arises, the full download of all documentation can be automated using `downloadDocs.sh`.
 
 ### Scripts
-1. measureDocumentation.py -
+1. measureSizeOfContentInFolder.py -
    Measure total size of all files in a folder by iterating through each layer (not counting symbolic links).
 2. measureMD.py -
    Measure the total size of all .md files in a folder (used a a "make-do" solution for non-centralized documentation).
